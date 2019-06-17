@@ -5,7 +5,7 @@ def convert_base(num, to_base=10, from_base=10):
     else:
         n = int(num)
     # now convert decimal to 'to_base' base
-    alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    alphabet = "0123456789ABCDEF"
     if n < to_base:
         return alphabet[n]
     else:
@@ -51,3 +51,23 @@ def sum_(x, y):
 
 sum_(binary_a, binary_b)
 
+
+def sub_(x, y):
+    max_len = max(len(x), len(y))
+    x = x.zfill(max_len)
+    y = y.zfill(max_len)
+    shift = 0
+    res = ''
+    for i in range(max_len - 1, -1, -1):
+        r = shift
+        r += 1 if x[i] == '1' else 0
+        r += -1 if y[i] == '1' else 0
+        res = ('1' if r % 2 == 1 else '0') + res
+        shift = 0 if r != -1 else -1
+
+    if shift != 0:
+        res = '1' + res
+    return res.zfill(max_len)
+
+
+sub_(binary_a, binary_b)
