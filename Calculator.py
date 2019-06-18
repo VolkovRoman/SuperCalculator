@@ -71,3 +71,28 @@ def sub_(x, y):
 
 
 sub_(binary_a, binary_b)
+
+
+def mul_(x , y):
+    max_len = max(len(x), len(y))
+    x = x.zfill(max_len)
+    y = y.zfill(max_len)
+    carry = "0"
+    res = ''
+    addend = []
+    buffer = '0'
+    for i in range(max_len - 1, -1, -1):
+        if y[i] == '0':
+            addend.append('0')
+        else:
+            addend.append(x)
+        carry += '0'   
+    for extra_zero in range(1,len(addend)):
+      addend[extra_zero] += '0'*extra_zero
+    for buf in range(len(addend)): 
+      buffer = sum_(buffer, addend[buf])
+    res = buffer
+    return res
+
+
+mul_(binary_a, binary_b)
