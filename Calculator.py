@@ -1,3 +1,6 @@
+ALPHABET = "0123456789ABCDEF"
+
+
 def convert_base(num, to_base=10, from_base=10):
     # first convert to decimal number
     if isinstance(num, str):
@@ -5,30 +8,30 @@ def convert_base(num, to_base=10, from_base=10):
     else:
         n = int(num)
     # now convert decimal to 'to_base' base
-    alphabet = "0123456789ABCDEF"
+
     if n < to_base:
-        return alphabet[n]
+        return ALPHABET[n]
     else:
-        return convert_base(n // to_base, to_base) + alphabet[n % to_base]
+        return convert_base(n // to_base, to_base) + ALPHABET[n % to_base]
 
 
-a = ('1234', 10)
-b = ('98765', 10)
-c = ('01010110', 2)
-d = ('01010101', 2)
-e = ('364', 8)
-f = ('146', 8)
-g = ('8a', 16)
-h = ('0e', 16)
+class BinaryNumber:
+    def __init__(self, number, base):
+        self.number = number
+        self.base = base
 
-binary_a = convert_base(a[0], 2, a[1])
-binary_b = convert_base(b[0], 2, b[1])
-binary_c = convert_base(c[0], 2, c[1])
-binary_d = convert_base(d[0], 2, d[1])
-binary_e = convert_base(e[0], 2, e[1])
-binary_f = convert_base(f[0], 2, f[1])
-binary_g = convert_base(g[0], 2, g[1])
-binary_h = convert_base(h[0], 2, h[1])
+    def convert_to_binary(self):
+        return convert_base(self.number, 2, self.base)
+
+
+binary_a = BinaryNumber('1234', 10).convert_to_binary()
+binary_b = BinaryNumber('98765', 10).convert_to_binary()
+binary_c = BinaryNumber('01010110', 2).convert_to_binary()
+binary_d = BinaryNumber('01010101', 2).convert_to_binary()
+binary_e = BinaryNumber('364', 8).convert_to_binary()
+binary_f = BinaryNumber('146', 8).convert_to_binary()
+binary_g = BinaryNumber('8a', 16).convert_to_binary()
+binary_h = BinaryNumber('8a', 16).convert_to_binary()
 
 
 def sum_(x, y):
@@ -88,10 +91,10 @@ def mul_(x , y):
             addend.append(x)
         carry += '0'   
     for extra_zero in range(1,len(addend)):
-      addend[extra_zero] += '0'*extra_zero
+        addend[extra_zero] += '0'*extra_zero
     for buf in range(len(addend)): 
-      buffer = sum_(buffer, addend[buf])
-    res = buffer
+        buffer = sum_(buffer, addend[buf])
+    res += buffer
     return res
 
 
