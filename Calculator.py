@@ -32,6 +32,9 @@ class Number:
 
     def convert_to_hex(self):
         return convert_base(self.number, 16, self.base)
+    
+    def __repr__(self):
+        return "('{number}', {base})".format(number=self.number, base=self.base)
         
 
 class convert_base_test(unittest.TestCase):
@@ -49,7 +52,7 @@ def sum_(x, y):
     x = x.zfill(max_len)
     y = y.zfill(max_len)
     shift = 0
-    res = ''
+    result = ''
     for i in range(max_len - 1, -1, -1):
         counter = shift
         if x[i] == '1'and y[i] == '1':
@@ -59,16 +62,18 @@ def sum_(x, y):
         else:
             counter += 0
 
-        res = ('1' if counter % 2 == 1 else '0') + res
+        result = ('1' if counter % 2 == 1 else '0') + result
         shift = 0 if counter < 2 else 1
 
     if shift != 0:
-        res = '1' + res
-    return res.lstrip('0')
+        result = '1' + result
+        result.lstrip('0')
+
+    return result
 
 
 class Calculator_test_sum(unittest.TestCase):
-    def test_result_sum(self):
+    def test_resultult_sum(self):
         binary_c = Number('01010110', 2).convert_to_binary()
         binary_d = Number('01010101', 2).convert_to_binary()
         self.assertEqual(sum_(binary_c, binary_d), '10101011')
@@ -79,7 +84,7 @@ def sub_(x, y):
     x = x.zfill(max_len)
     y = y.zfill(max_len)
     shift = 0
-    res = ''
+    result = ''
     for i in range(max_len - 1, -1, -1):
         counter = shift
         if x[i] == '1'and y[i] == '0':
@@ -88,20 +93,21 @@ def sub_(x, y):
             counter -= 1
         else:
             counter += 0
-        res = ('1' if counter % 2 == 1 else '0') + res
+        result = ('1' if counter % 2 == 1 else '0') + result
         shift = 0 if counter != -1 else -1
 
     if shift != 0:
-        res = '1' + res
-    return res.lstrip('0')
+        result = '1' + result
+        result.lstrip('0')
 
+    return result
 
 
 class Calculator_test_sub(unittest.TestCase):
-    def test_result_sub(self):
+    def test_resultult_sub(self):
         binary_e = Number('364', 8).convert_to_binary()
         binary_f = Number('146', 8).convert_to_binary()
-        self.assertEqual(sub_('010', '010'), '')
+        self.assertEqual(sub_('010', '010'), '000')
         self.assertEqual(sub_(binary_e, binary_f), '10001110')
 
 
@@ -111,7 +117,7 @@ def mul_(x, y):
     y = y.zfill(max_len)
     carry = "0"
     addend = []
-    res = '0'
+    result = '0'
     for i in range(max_len - 1, -1, -1):
         if y[i] == '0':
             addend.append('0')
@@ -121,16 +127,18 @@ def mul_(x, y):
     for extra_zero in range(1, len(addend)):
         addend[extra_zero] += '0' * extra_zero
     for buf in range(len(addend)):
-        res = sum_(res, addend[buf])
-    
-    return res.lstrip('0')
+        result = sum_(result, addend[buf])
+
+    result.lstrip('0')
+
+    return result
 
 
 class Calculator_test_mul(unittest.TestCase):
-    def test_resulf_mul(self):
+    def test_resultulf_mul(self):
         binary_g = Number('8a', 16).convert_to_binary()
         binary_h = Number('9b', 16).convert_to_binary()
-        self.assertEqual(mul_('0', '0'), '')
+        self.assertEqual(mul_('0', '0'), '0')
         self.assertEqual(mul_(binary_g, binary_h), '101001110001110')
 
 
