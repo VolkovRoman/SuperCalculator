@@ -92,8 +92,31 @@ def mul_(x , y):
 
 
 
-    print(slag)
-    print(dictt)
+class CalculatorTest(unittest.TestCase):
+    def test_result_sum(self):
+        binary_c = Number('01010110', 2).convert_to_binary()
+        binary_d = Number('01010101', 2).convert_to_binary()
+        self.assertEqual(sum_(binary_c, binary_d), '10101011')
+
+    def test_result_sub(self):
+        binary_e = Number('364', 8).convert_to_binary()
+        binary_f = Number('146', 8).convert_to_binary()
+        self.assertEqual(sub_('010', '010'), '000')
+        self.assertEqual(sub_(binary_e, binary_f), '10001110')
+
+    def test_convert_type(self):
+        binary_a = Number('1234', 10).convert_to_binary()
+        self.addTypeEqualityFunc(str, binary_a)
+
+    def test_convert_func(self):
+        binary_b = Number('98765', 10).convert_to_binary()
+        self.assertEqual(binary_b, '11000000111001101')
+
+    def test_result_mul(self):
+        binary_g = Number('8a', 16).convert_to_binary()
+        binary_h = Number('9b', 16).convert_to_binary()
+        self.assertEqual(mul_('0', '0'), '0')
+        self.assertEqual(mul_(binary_g, binary_h), '101001110001110')
 
 
 print(mul_(binary_c, binary_d))
