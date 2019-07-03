@@ -1,3 +1,8 @@
+import unittest
+
+ALPHABET = "0123456789ABCDEF"
+
+
 def convert_base(num, to_base=10, from_base=10):
     # first convert to decimal number
     if isinstance(num, str):
@@ -5,30 +10,22 @@ def convert_base(num, to_base=10, from_base=10):
     else:
         n = int(num)
     # now convert decimal to 'to_base' base
-    alphabet = "0123456789ABCDEF"
+
     if n < to_base:
-        return alphabet[n]
+        return ALPHABET[n]
     else:
-        return convert_base(n // to_base, to_base) + alphabet[n % to_base]
+        return convert_base(n // to_base, to_base) + ALPHABET[n % to_base]
 
+class Number:
+    def __init__(self, number, base):
+        self.number = number
+        self.base = base
 
-a = ('1234', 10)
-b = ('98765', 10)
-c = ('01010110', 2)
-d = ('01010101', 2)
-e = ('364', 8)
-f = ('146', 8)
-g = ('8a', 16)
-h = ('0e', 16)
-
-binary_a = convert_base(a[0], 2, a[1])
-binary_b = convert_base(b[0], 2, b[1])
-binary_c = convert_base(c[0], 2, c[1])
-binary_d = convert_base(d[0], 2, d[1])
-binary_e = convert_base(e[0], 2, e[1])
-binary_f = convert_base(f[0], 2, f[1])
-binary_g = convert_base(g[0], 2, g[1])
-binary_h = convert_base(h[0], 2, h[1])
+    def convert_to_binary(self):
+        return convert_base(self.number, 2, self.base)
+    
+    def __repr__(self):
+        return "('{number}', {base})".format(number=self.number, base=self.base)
 
 
 def sum_(x, y):
@@ -36,20 +33,24 @@ def sum_(x, y):
     x = x.zfill(max_len)
     y = y.zfill(max_len)
     shift = 0
-    res = ''
+    result = ''
     for i in range(max_len - 1, -1, -1):
-        r = shift
-        r += 1 if x[i] == '1' else 0
-        r += 1 if y[i] == '1' else 0
-        res = ('1' if r % 2 == 1 else '0') + res
-        shift = 0 if r < 2 else 1
+        counter = shift
+        if x[i] == '1'and y[i] == '1':
+            counter += 2
+        elif x[i] == '1'or y[i] == '1':
+            counter += 1
+        else:
+            counter += 0
+
+        result = ('1' if counter % 2 == 1 else '0') + result
+        shift = 0 if counter < 2 else 1
 
     if shift != 0:
-        res = '1' + res
-    return res
+        result = '1' + result
+        result.lstrip('0')
 
-
-sum_(binary_a, binary_b)
+    return result
 
 
 def sub_(x, y):
@@ -57,39 +58,46 @@ def sub_(x, y):
     x = x.zfill(max_len)
     y = y.zfill(max_len)
     shift = 0
-    res = ''
+    result = ''
     for i in range(max_len - 1, -1, -1):
-        r = shift
-        r += 1 if x[i] == '1' else 0
-        r += -1 if y[i] == '1' else 0
-        res = ('1' if r % 2 == 1 else '0') + res
-        shift = 0 if r != -1 else -1
+        counter = shift
+        if x[i] == '1'and y[i] == '0':
+            counter += 1
+        elif x[i] == '0'and y[i] == '1':
+            counter -= 1
+        else:
+            counter += 0
+        result = ('1' if counter % 2 == 1 else '0') + result
+        shift = 0 if counter != -1 else -1
 
     if shift != 0:
-        res = '1' + res
-    return res.zfill(max_len)
+        result = '1' + result
+        result.lstrip('0')
+
+    return result
 
 
-sub_(binary_a, binary_b)
-
-
-def mul_(x , y):
+def mul_(x, y):
     max_len = max(len(x), len(y))
     x = x.zfill(max_len)
     y = y.zfill(max_len)
     carry = "0"
-    res = ''
-    slag = []
+    addend = []
+    result = '0'
     for i in range(max_len - 1, -1, -1):
         if y[i] == '0':
-            slag.append('0')
+            addend.append('0')
         else:
-            slag.append(x+carry)
+            addend.append(x)
         carry += '0'
-    dictt = []
-    for y in range(0, len(slag)-1, 2):
-        dictt.append(sum_(slag[y], slag[y + 1]))
+    for extra_zero in range(1, len(addend)):
+        addend[extra_zero] += '0' * extra_zero
+    for buf in range(len(addend)):
+        result = sum_(result, addend[buf])
 
+    result.lstrip('0')
+
+    return result
 
 
 class CalculatorTest(unittest.TestCase):
@@ -119,4 +127,5 @@ class CalculatorTest(unittest.TestCase):
         self.assertEqual(mul_(binary_g, binary_h), '101001110001110')
 
 
-print(mul_(binary_c, binary_d))
+if __name__ == '__main__':
+    unittest.main()
