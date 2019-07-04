@@ -1,20 +1,8 @@
 import unittest
 
 ALPHABET = "0123456789ABCDEF"
-
-
-def convert_base(num, to_base=10, from_base=10):
-    # first convert to decimal number
-    if isinstance(num, str):
-        n = int(num, from_base)
-    else:
-        n = int(num)
-    # now convert decimal to 'to_base' base
-
-    if n < to_base:
-        return ALPHABET[n]
-    else:
-        return convert_base(n // to_base, to_base) + ALPHABET[n % to_base]
+global shift
+shift = 0
 
 class Number:
     def __init__(self, number, base):
@@ -22,19 +10,44 @@ class Number:
         self.base = base
 
     def convert_to_binary(self):
+        def convert_base(num, to_base=10, from_base=10):
+            # first convert to decimal number
+            if isinstance(num, str):
+                n = int(num, from_base)
+            else:
+                n = int(num)
+            # now convert decimal to 'to_base' base
+
+            if n < to_base:
+                return ALPHABET[n]
+            else:
+                return convert_base(n // to_base, to_base) + ALPHABET[n % to_base]
+
         return convert_base(self.number, 2, self.base)
-    
+
     def __repr__(self):
         return "('{number}', {base})".format(number=self.number, base=self.base)
 
 
-def sum_(x, y):
+def normalized(x, y):
     max_len = max(len(x), len(y))
     x = x.zfill(max_len)
     y = y.zfill(max_len)
-    shift = 0
+    return x, y
+
+
+def preparing_result(shift, result):
+    if shift != 0:
+        result = '1' + result
+        result.lstrip('0')
+    return result
+
+
+def sum_(x, y):
+    x, y = normalized(x, y)
+    global shift
     result = ''
-    for i in range(max_len - 1, -1, -1):
+    for i in range(len(x) - 1, -1, -1):
         counter = shift
         if x[i] == '1'and y[i] == '1':
             counter += 2
@@ -46,20 +59,14 @@ def sum_(x, y):
         result = ('1' if counter % 2 == 1 else '0') + result
         shift = 0 if counter < 2 else 1
 
-    if shift != 0:
-        result = '1' + result
-        result.lstrip('0')
-
-    return result
+    return preparing_result(shift, result)
 
 
 def sub_(x, y):
-    max_len = max(len(x), len(y))
-    x = x.zfill(max_len)
-    y = y.zfill(max_len)
-    shift = 0
+    x, y = normalized(x, y)
+    global shift
     result = ''
-    for i in range(max_len - 1, -1, -1):
+    for i in range(len(x) - 1, -1, -1):
         counter = shift
         if x[i] == '1'and y[i] == '0':
             counter += 1
@@ -70,28 +77,21 @@ def sub_(x, y):
         result = ('1' if counter % 2 == 1 else '0') + result
         shift = 0 if counter != -1 else -1
 
-    if shift != 0:
-        result = '1' + result
-        result.lstrip('0')
-
-    return result
+    return preparing_result(shift, result)
 
 
 def mul_(x, y):
-    max_len = max(len(x), len(y))
-    x = x.zfill(max_len)
-    y = y.zfill(max_len)
-    carry = "0"
+    x, y = normalized(x, y)
     addend = []
     result = '0'
-    for i in range(max_len - 1, -1, -1):
+    for i in range(len(x) - 1, -1, -1):
         if y[i] == '0':
             addend.append('0')
         else:
             addend.append(x)
-        carry += '0'
     for extra_zero in range(1, len(addend)):
         addend[extra_zero] += '0' * extra_zero
+
     for buf in range(len(addend)):
         result = sum_(result, addend[buf])
 
