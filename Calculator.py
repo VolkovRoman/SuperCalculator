@@ -4,26 +4,23 @@ ALPHABET = "0123456789ABCDEF"
 global shift
 shift = 0
 
+
 class Number:
     def __init__(self, number, base):
         self.number = number
         self.base = base
 
     def convert_to_binary(self):
-        def convert_base(num, to_base=10, from_base=10):
-            # first convert to decimal number
-            if isinstance(num, str):
-                n = int(num, from_base)
-            else:
-                n = int(num)
-            # now convert decimal to 'to_base' base
 
-            if n < to_base:
-                return ALPHABET[n]
-            else:
-                return convert_base(n // to_base, to_base) + ALPHABET[n % to_base]
-
-        return convert_base(self.number, 2, self.base)
+        if isinstance(self.number, str):
+            n = int(self.number, self.base)
+        else:
+            n = int(self.number)
+        result = ''
+        while n > 0:
+            result = str(n % 2) + result
+            n = n // 2
+        return result
 
     def __repr__(self):
         return "('{number}', {base})".format(number=self.number, base=self.base)
@@ -101,6 +98,15 @@ def mul_(x, y):
 
 
 class CalculatorTest(unittest.TestCase):
+
+    def test_convert_type(self):
+        binary_a = Number('1234', 10).convert_to_binary()
+        self.addTypeEqualityFunc(str, binary_a)
+
+    def test_convert_func(self):
+        binary_b = Number('98765', 10).convert_to_binary()
+        self.assertEqual(binary_b, '11000000111001101')
+
     def test_result_sum(self):
         binary_c = Number('01010110', 2).convert_to_binary()
         binary_d = Number('01010101', 2).convert_to_binary()
@@ -111,14 +117,6 @@ class CalculatorTest(unittest.TestCase):
         binary_f = Number('146', 8).convert_to_binary()
         self.assertEqual(sub_('010', '010'), '000')
         self.assertEqual(sub_(binary_e, binary_f), '10001110')
-
-    def test_convert_type(self):
-        binary_a = Number('1234', 10).convert_to_binary()
-        self.addTypeEqualityFunc(str, binary_a)
-
-    def test_convert_func(self):
-        binary_b = Number('98765', 10).convert_to_binary()
-        self.assertEqual(binary_b, '11000000111001101')
 
     def test_result_mul(self):
         binary_g = Number('8a', 16).convert_to_binary()
