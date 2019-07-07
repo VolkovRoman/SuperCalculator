@@ -1,6 +1,5 @@
 import unittest
 
-ALPHABET = "0123456789ABCDEF"
 global shift
 shift = 0
 
@@ -22,9 +21,6 @@ class Number:
             n = n // 2
         return result
 
-    def __repr__(self):
-        return "('{number}', {base})".format(number=self.number, base=self.base)
-
 
 def normalized(x, y):
     max_len = max(len(x), len(y))
@@ -36,7 +32,7 @@ def normalized(x, y):
 def preparing_result(shift, result):
     if shift != 0:
         result = '1' + result
-        result.lstrip('0')
+        # result.lstrip('0')
     return result
 
 
@@ -64,16 +60,27 @@ def sub_(x, y):
     global shift
     result = ''
     for i in range(len(x) - 1, -1, -1):
-        counter = shift
-        if x[i] == '1'and y[i] == '0':
-            counter += 1
-        elif x[i] == '0'and y[i] == '1':
-            counter -= 1
-        else:
-            counter += 0
-        result = ('1' if counter % 2 == 1 else '0') + result
-        shift = 0 if counter != -1 else -1
+        s = int(x[i]) - int(y[i])
+        if s == -1:
+            if shift == 0:
 
+                result = result + "1"
+                shift = 1
+            else:
+                result = result + "0"
+
+        elif s == 0:
+            if shift == 0:
+                result = result + "0"
+            else:
+                result = result + "1"
+        else:
+            if shift == 0:
+                result = result + "1"
+            else:
+                result = result + "0"
+                shift = 0
+    result = result[::-1]
     return preparing_result(shift, result)
 
 
