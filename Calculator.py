@@ -32,7 +32,7 @@ def normalized(x, y):
 def preparing_result(shift, result):
     if shift != 0:
         result = '1' + result
-        # result.lstrip('0')
+        result.lstrip('0')
     return result
 
 
@@ -63,7 +63,6 @@ def sub_(x, y):
         s = int(x[i]) - int(y[i])
         if s == -1:
             if shift == 0:
-
                 result = result + "1"
                 shift = 1
             else:
@@ -74,6 +73,7 @@ def sub_(x, y):
                 result = result + "0"
             else:
                 result = result + "1"
+
         else:
             if shift == 0:
                 result = result + "1"
@@ -104,6 +104,24 @@ def mul_(x, y):
     return result
 
 
+def div_(x, y):
+    x, y = normalized(x, y)
+    pre_result = x
+    result = "0"
+    while int(pre_result) > 0:
+        if len(pre_result) == len(x):
+            pre_result = sub_(pre_result, y)
+            result = sum_(result, '1')
+        else:
+            break
+    # Это костыль, счетчик считает еще два лишних раза, если число не целое, надо бы переделать
+    if len(pre_result) < (len(x)):
+        return preparing_result(shift, result)
+    else:
+        result = sub_(result, '0')
+        return preparing_result(shift, result)
+
+
 class CalculatorTest(unittest.TestCase):
 
     def test_convert_type(self):
@@ -130,6 +148,12 @@ class CalculatorTest(unittest.TestCase):
         binary_h = Number('9b', 16).convert_to_binary()
         self.assertEqual(mul_('0', '0'), '0')
         self.assertEqual(mul_(binary_g, binary_h), '101001110001110')
+
+    def test_result_div(self):
+        binary_i = Number('48', 10).convert_to_binary()
+        binary_j = Number('6', 10).convert_to_binary()
+        self.assertEqual(div_(binary_i, binary_j), '1000')
+        self.assertEqual(div_('1000000', '1000'), '1000')
 
 
 if __name__ == '__main__':
