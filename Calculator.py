@@ -1,8 +1,5 @@
 import unittest
 
-global shift
-shift = 0
-
 
 class Number:
     def __init__(self, number, base):
@@ -30,15 +27,16 @@ def normalized(x, y):
 
 
 def preparing_result(shift, result):
-    if shift != 0:
+    if shift != 0 and result != "0":
         result = '1' + result
         result.lstrip('0')
-    return result
-
+        return result
+    else:
+        return result
 
 def sum_(x, y):
     x, y = normalized(x, y)
-    global shift
+    shift = 0
     result = ''
     for i in range(len(x) - 1, -1, -1):
         counter = shift
@@ -57,7 +55,7 @@ def sum_(x, y):
 
 def sub_(x, y):
     x, y = normalized(x, y)
-    global shift
+    shift = 0
     result = ''
     for i in range(len(x) - 1, -1, -1):
         s = int(x[i]) - int(y[i])
@@ -87,7 +85,7 @@ def sub_(x, y):
 def mul_(x, y):
     x, y = normalized(x, y)
     addend = []
-    result = '0'
+    result = ''
     for i in range(len(x) - 1, -1, -1):
         if y[i] == '0':
             addend.append('0')
@@ -107,19 +105,25 @@ def mul_(x, y):
 def div_(x, y):
     x, y = normalized(x, y)
     pre_result = x
-    result = "0"
+    counter = 0
     while int(pre_result) > 0:
-        if len(pre_result) == len(x):
+        if len(pre_result) <= len(x):
             pre_result = sub_(pre_result, y)
-            result = sum_(result, '1')
+            counter +=1
         else:
             break
-    # Это костыль, счетчик считает еще два лишних раза, если число не целое, надо бы переделать
-    if len(pre_result) < (len(x)):
-        return preparing_result(shift, result)
-    else:
-        result = sub_(result, '0')
-        return preparing_result(shift, result)
+    # Когда число становится меньше нуля, то оно продолжает занимать "1" из старших разрядов
+    # Пример: 011 - 100; в двоичной будет -1, а моя программа выдаст 1111
+    # В участке кода ниже указано, если мы уходим за границы положительных чисел
+    # (то есть когда в нем станет больше разрядов,
+    # то нужно компенсировать это, выччитая 1 из конечного результата)
+    
+    if len(pre_result) > (len(x)):
+        counter = counter-1       
+    elif len(pre_result) == (len(x)):
+        counter = counter
+
+    return Number(counter, 10).convert_to_binary()
 
 
 class CalculatorTest(unittest.TestCase):
