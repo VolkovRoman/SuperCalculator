@@ -51,6 +51,22 @@ test_mul_oct = [
     ['1774', '4771', '11736034'],
     ['306773456123212512', '17', '5650675664341037526']
 ]
+test_div_dec = [
+    ['362', '12', '30'],
+    ['997', '17', '58']
+]
+test_div_bin = [
+    ['10110001011010110110', '1110101', '1100001000011'],
+    ['10100100100', '11111111', '101']
+]
+test_div_hex = [
+    ['AD14', '6', '1CD8'],
+    ['199456', '80', '3328']
+]
+test_div_oct = [
+    ['774', '6', '124'],
+    ['456123654321', '7777777', '45612']
+]
 
 
 class CalculatorTest(unittest.TestCase):
@@ -152,6 +168,39 @@ class CalculatorTest(unittest.TestCase):
             func_res = str('%o' % func_res)  # Перевожу в нужную СС для сравнения с результатами других функций
             self.assertEqual(func_res, res)
             func_another_res = Calculator().calculate('0'+fir, '0'+sec, '*')
+            self.assertEqual(func_another_res, res)
+
+    def test_div_dec(self):
+        for fir, sec, res in test_div_dec:
+            func_res = div_(Number(fir, 10).convert_to_binary(), Number(sec, 10).convert_to_binary())
+            func_res = int(func_res, 2)  # Перевожу в нужную СС для сравнения с результатами других функций
+            self.assertEqual(str(func_res), res)
+            func_another_res = Calculator().calculate(fir, sec, '/')
+            self.assertEqual(func_another_res, res)
+
+    def test_div_bin(self):
+        for fir, sec, res in test_div_bin:
+            func_res = div_(fir, sec)
+            self.assertEqual(func_res, res)
+            func_another_res = Calculator().calculate('0b'+fir, '0b'+sec, '/')
+            self.assertEqual(func_another_res, res)
+
+    def test_div_hex(self):
+        for fir, sec, res in test_div_hex:
+            func_res = div_(Number(fir, 16).convert_to_binary(), Number(sec, 16).convert_to_binary())
+            func_res = int(func_res, 2)  # Перевожу в 10 СС
+            func_res = str('%X' % func_res)  # Перевожу в нужную СС для сравнения с результатами других функций
+            self.assertEqual(func_res.upper(), res)
+            func_another_res = Calculator().calculate('0x'+fir, '0x'+sec, '/')
+            self.assertEqual(func_another_res, res)
+
+    def test_div_oct(self):
+        for fir, sec, res in test_div_oct:
+            func_res = div_(Number(fir, 8).convert_to_binary(), Number(sec, 8).convert_to_binary())
+            func_res = int(func_res, 2)  # Перевожу в 10 СС
+            func_res = str('%o' % func_res)  # Перевожу в нужную СС для сравнения с результатами других функций
+            self.assertEqual(func_res, res)
+            func_another_res = Calculator().calculate('0'+fir, '0'+sec, '/')
             self.assertEqual(func_another_res, res)
 
 
