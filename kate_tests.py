@@ -1,4 +1,4 @@
-from kate_calc_ref import Number, Calculator
+from kate_calc import Number, Calculator
 
 
 def test_get_base_and_num(test_pairs):
