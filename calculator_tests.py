@@ -35,6 +35,22 @@ test_sub_oct = [
     ['71175652', '555421', '70420231'],
     ['13243546576', '243546576', '13000000000']
 ]
+test_mul_dec = [
+    ['111', '11', '1221'],
+    ['123456789987654321', '64', '7901234559209876544']
+]
+test_mul_bin = [
+    ['11111001010110101', '101', '10011011110110001001'],
+    ['100011101', '111001110', '100000001001010110']
+]
+test_mul_hex = [
+    ['FADE', '10011', 'FAEEA8BE'],
+    ['1CDB', 'A6', '12B602']
+]
+test_mul_oct = [
+    ['1774', '4771', '11736034'],
+    ['306773456123212512', '17', '5650675664341037526']
+]
 
 
 class CalculatorTest(unittest.TestCase):
@@ -103,6 +119,39 @@ class CalculatorTest(unittest.TestCase):
             func_res = str('%o' % func_res)  # Перевожу в нужную СС для сравнения с результатами других функций
             self.assertEqual(func_res, res)
             func_another_res = Calculator().calculate('0'+fir, '0'+sec, '-')
+            self.assertEqual(func_another_res, res)
+
+    def test_mul_dec(self):
+        for fir, sec, res in test_mul_dec:
+            func_res = mul_(Number(fir, 10).convert_to_binary(), Number(sec, 10).convert_to_binary())
+            func_res = int(func_res, 2)  # Перевожу в нужную СС для сравнения с результатами других функций
+            self.assertEqual(str(func_res), res)
+            func_another_res = Calculator().calculate(fir, sec, '*')
+            self.assertEqual(func_another_res, res)
+
+    def test_mul_bin(self):
+        for fir, sec, res in test_mul_bin:
+            func_res = mul_(fir, sec)
+            self.assertEqual(func_res, res)
+            func_another_res = Calculator().calculate('0b'+fir, '0b'+sec, '*')
+            self.assertEqual(func_another_res, res)
+
+    def test_mul_hex(self):
+        for fir, sec, res in test_mul_hex:
+            func_res = mul_(Number(fir, 16).convert_to_binary(), Number(sec, 16).convert_to_binary())
+            func_res = int(func_res, 2)  # Перевожу в 10 СС
+            func_res = str('%X' % func_res)  # Перевожу в нужную СС для сравнения с результатами других функций
+            self.assertEqual(func_res.upper(), res)
+            func_another_res = Calculator().calculate('0x'+fir, '0x'+sec, '*')
+            self.assertEqual(func_another_res, res)
+
+    def test_mul_oct(self):
+        for fir, sec, res in test_mul_oct:
+            func_res = mul_(Number(fir, 8).convert_to_binary(), Number(sec, 8).convert_to_binary())
+            func_res = int(func_res, 2)  # Перевожу в 10 СС
+            func_res = str('%o' % func_res)  # Перевожу в нужную СС для сравнения с результатами других функций
+            self.assertEqual(func_res, res)
+            func_another_res = Calculator().calculate('0'+fir, '0'+sec, '*')
             self.assertEqual(func_another_res, res)
 
 
