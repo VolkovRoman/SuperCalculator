@@ -50,7 +50,7 @@ class Number:
                 dec_number = h[dec_number]
             except KeyError:
                 return 'Invalid decimal number'
-        return dec_number
+        return str(dec_number)
 
 
 class Calculator:
@@ -88,6 +88,7 @@ class Calculator:
             return "Operation unsupported."
 
     def unify_nums(self, x, y):
+        x, y = str(x), str(y)
         len_of_x, len_of_y = len(x), len(y)
         if len_of_x > len_of_y:
             for i in range(len_of_x - len_of_y):
@@ -99,10 +100,16 @@ class Calculator:
         return x.upper(), y.upper()
 
     def add(self, x, y, base):
-        return self.basis_for_add_or_subtract(x, y, base, op_code=1)
+        res = self.basis_for_add_or_subtract(x, y, base, op_code=1)
+        if base == 16:
+            return res
+        return str(int(res))
 
     def subtract(self, x, y, base):
-        return self.basis_for_add_or_subtract(x, y, base, op_code=-1)
+        res = self.basis_for_add_or_subtract(x, y, base, op_code=-1)
+        if base == 16 or res[0] == '-':
+            return res
+        return str(int(res))
 
     def basis_for_add_or_subtract(self, x, y, base, op_code):
         res = ''
@@ -141,42 +148,42 @@ class Calculator:
         else:
             res = res[::-1]
 
-        if len(res) > 1:
-            res = res.lstrip('0')
         if negative_result:
             res = '-' + res
         return res
 
     def multiply(self, x, y, base):
         res = ''
+        x, y = str(x), str(y)
         cur_iteration_pool = 0
         for i in range(-1, -(len(y) + 1), -1):
             iteration_res = ''
             for j in range(-1, -(len(x) + 1), -1):
                 x_cur, y_cur = x[j], y[i]
-                if x_cur == 0 or y_cur == 0:
-                    iteration_res = '0'
-                    continue
+                if base == 16:
+                    x_cur = Number.hex_to_dec(x[j])
+                    y_cur = Number.hex_to_dec(y[i])
+                x_cur = int(x_cur)
+                y_cur = int(y_cur)
+                current_res = x_cur * y_cur + cur_iteration_pool
+                cur_iteration_pool = 0
+
+                if current_res >= base:
+                    cur_iteration_pool = current_res // base
+                    current_res = current_res % base
+
+                additional_rate = 10 ** -(j + 1)
+
+                if base == 16:
+                    current_res = Number.dec_to_hex(current_res)
+                    iteration_res = self.add(iteration_res, str(current_res) + str(additional_rate)[1:], base)
+                    try:
+                        if int(iteration_res) >= 10:
+                            iteration_res = Number.dec_to_hex(int(iteration_res))
+                    except ValueError:
+                        continue
                 else:
-                    if base == 16:
-                        x_cur = Number.hex_to_dec(x[j])
-                        y_cur = Number.hex_to_dec(y[i])
-                    x_cur = int(x_cur)
-                    y_cur = int(y_cur)
-                    current_res = x_cur * y_cur + cur_iteration_pool
-                    cur_iteration_pool = 0
-
-                    if current_res >= base:
-                        cur_iteration_pool = current_res // base
-                        current_res = current_res % base
-
-                    additional_rate = 10 ** -(j + 1)
-
-                    if base == 16:
-                        current_res = Number.dec_to_hex(current_res)
-                        iteration_res = self.add(iteration_res, str(current_res) + str(additional_rate)[1:], base)
-                    else:
-                        iteration_res = str(self.add(iteration_res, str(current_res * additional_rate), base))
+                    iteration_res = str(self.add(iteration_res, str(current_res * additional_rate), base))
             additional_rate = 10 ** -(i + 1)
             if cur_iteration_pool:
                 iteration_res = str(cur_iteration_pool) + iteration_res
@@ -188,6 +195,7 @@ class Calculator:
     def divide(self, x, y, base):
         # Деление через вычитание
         res = '0'
+        x, y = str(x), str(y)
         x_cur = x[:]
         if base == 16:
             unified_x, unified_y = self.unify_nums(x_cur, y)
@@ -199,10 +207,15 @@ class Calculator:
             while int(x_cur) >= int(y):
                 x_cur = self.subtract(x_cur, y, base)
                 res = self.add('1', res, base)
+        if len(res) > 1:
+            res = res.lstrip('0')
         return res, x_cur
 
     def get_division_remainder(self, x, y, base):
-        return self.divide(x, y, base)[1]
+        res = self.divide(x, y, base)[1]
+        if len(res) > 1:
+            res = res.lstrip('0')
+        return res
 
 
 if __name__ == '__main__':
