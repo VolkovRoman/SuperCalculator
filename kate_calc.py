@@ -88,6 +88,7 @@ class Calculator:
             return "Operation unsupported."
 
     def unify_nums(self, x, y):
+        x, y = str(x), str(y)
         len_of_x, len_of_y = len(x), len(y)
         if len_of_x > len_of_y:
             for i in range(len_of_x - len_of_y):
@@ -153,6 +154,7 @@ class Calculator:
 
     def multiply(self, x, y, base):
         res = ''
+        x, y = str(x), str(y)
         cur_iteration_pool = 0
         for i in range(-1, -(len(y) + 1), -1):
             iteration_res = ''
@@ -193,6 +195,7 @@ class Calculator:
     def divide(self, x, y, base):
         # Деление через вычитание
         res = '0'
+        x, y = str(x), str(y)
         x_cur = x[:]
         if base == 16:
             unified_x, unified_y = self.unify_nums(x_cur, y)
