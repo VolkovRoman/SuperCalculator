@@ -106,7 +106,10 @@ def plot_output(calc_name, calc_funcs, n, time):
         time_cur = time[op]
         plt.figure()
         plt.plot(n_cur, time_cur)
-        plt.text(n_cur[0] + 0.2, time_cur[0] - 0.1, 't(n)' + calc_funcs[op].__name__)
+        plt.xlabel('Sum of operands digits')
+        plt.ylabel('Total time, s')
+        plt.plot(n_cur, time_cur, linestyle='-', marker='+')
+        plt.title(calc_funcs[op].__name__)
         plt.grid(True)
         plt.savefig(calc_name + '_' + calc_funcs[op].__name__ + '.png')
 
