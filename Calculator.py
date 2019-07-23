@@ -29,10 +29,10 @@ def normalized(x, y):
 def preparing_result(shift, result):
     if shift != 0 and result != "0":
         result = '1' + result
-        result.lstrip('0')
         return result
     else:
         return result
+
 
 def sum_(x, y):
     x, y = normalized(x, y)
@@ -109,7 +109,7 @@ def div_(x, y):
     while int(pre_result) > 0:
         if len(pre_result) <= len(x):
             pre_result = sub_(pre_result, y)
-            counter +=1
+            counter += 1
         else:
             break
     # Когда число становится меньше нуля, то оно продолжает занимать "1" из старших разрядов
@@ -125,40 +125,3 @@ def div_(x, y):
 
     return Number(counter, 10).convert_to_binary()
 
-
-class CalculatorTest(unittest.TestCase):
-
-    def test_convert_type(self):
-        binary_a = Number('1234', 10).convert_to_binary()
-        self.addTypeEqualityFunc(str, binary_a)
-
-    def test_convert_func(self):
-        binary_b = Number('98765', 10).convert_to_binary()
-        self.assertEqual(binary_b, '11000000111001101')
-
-    def test_result_sum(self):
-        binary_c = Number('01010110', 2).convert_to_binary()
-        binary_d = Number('01010101', 2).convert_to_binary()
-        self.assertEqual(sum_(binary_c, binary_d), '10101011')
-
-    def test_result_sub(self):
-        binary_e = Number('364', 8).convert_to_binary()
-        binary_f = Number('146', 8).convert_to_binary()
-        self.assertEqual(sub_('010', '010'), '000')
-        self.assertEqual(sub_(binary_e, binary_f), '10001110')
-
-    def test_result_mul(self):
-        binary_g = Number('8a', 16).convert_to_binary()
-        binary_h = Number('9b', 16).convert_to_binary()
-        self.assertEqual(mul_('0', '0'), '0')
-        self.assertEqual(mul_(binary_g, binary_h), '101001110001110')
-
-    def test_result_div(self):
-        binary_i = Number('48', 10).convert_to_binary()
-        binary_j = Number('6', 10).convert_to_binary()
-        self.assertEqual(div_(binary_i, binary_j), '1000')
-        self.assertEqual(div_('1000000', '1000'), '1000')
-
-
-if __name__ == '__main__':
-    unittest.main()
