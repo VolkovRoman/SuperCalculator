@@ -1,6 +1,6 @@
 import unittest
-from Calculator import Number, sum_, sub_, mul_, div_
-from kate_calc import Calculator
+from calculator_roman import Number, sum_, sub_, mul_, div_
+from calculator_kate import Calculator
 
 # first num, second num and result
 test_sum_dec = [
