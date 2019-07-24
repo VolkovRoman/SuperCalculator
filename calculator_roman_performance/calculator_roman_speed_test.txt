@@ -1,0 +1,328 @@
+--------- calculator_roman sum_ function ---------
+
+------ sum_ -- Length of operands: 112, 112 ------
+
+         16 function calls in 0.001 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.001    0.000    0.001    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:37(sum_)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+        2    0.000    0.000    0.000    0.000 {method 'zfill' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ sum_ -- Length of operands: 7327, 7327 ------
+
+         16 function calls in 0.972 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.939    0.470    0.939    0.470 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        1    0.033    0.033    0.033    0.033 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:37(sum_)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        2    0.000    0.000    0.000    0.000 {method 'zfill' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ sum_ -- Length of operands: 10990, 10990 ------
+
+         16 function calls in 2.151 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    2.084    1.042    2.084    1.042 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        1    0.067    0.067    0.067    0.067 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:37(sum_)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+        2    0.000    0.000    0.000    0.000 {method 'zfill' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ sum_ -- Length of operands: 14653, 14653 ------
+
+         16 function calls in 3.790 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    3.678    1.839    3.678    1.839 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        1    0.113    0.113    0.113    0.113 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:37(sum_)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+        2    0.000    0.000    0.000    0.000 {method 'zfill' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+--------- calculator_roman sub_ function ---------
+
+------ sub_ -- Length of operands: 112, 112 ------
+
+         16 function calls in 0.001 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.001    0.000    0.001    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:56(sub_)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        2    0.000    0.000    0.000    0.000 {method 'zfill' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ sub_ -- Length of operands: 7327, 7327 ------
+
+         16 function calls in 0.951 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.929    0.465    0.929    0.465 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        1    0.022    0.022    0.022    0.022 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:56(sub_)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        2    0.000    0.000    0.000    0.000 {method 'zfill' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ sub_ -- Length of operands: 10990, 10990 ------
+
+         16 function calls in 2.113 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    2.080    1.040    2.080    1.040 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        1    0.033    0.033    0.033    0.033 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:56(sub_)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        2    0.000    0.000    0.000    0.000 {method 'zfill' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ sub_ -- Length of operands: 14653, 14653 ------
+
+         16 function calls in 3.719 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    3.675    1.838    3.675    1.838 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        1    0.044    0.044    0.044    0.044 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:56(sub_)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+        2    0.000    0.000    0.000    0.000 {method 'zfill' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+--------- calculator_roman mul_ function ---------
+
+------ mul_ -- Length of operands: 180, 180 ------
+
+         5998 function calls in 0.341 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      598    0.336    0.001    0.339    0.001 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:37(sum_)
+        2    0.001    0.001    0.001    0.001 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+      599    0.001    0.000    0.002    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        1    0.001    0.001    0.340    0.340 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:85(mul_)
+     1198    0.001    0.000    0.001    0.000 {method 'zfill' of 'str' objects}
+      599    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+     1799    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+      598    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+      598    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ mul_ -- Length of operands: 207, 207 ------
+
+         6888 function calls in 0.464 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      687    0.459    0.001    0.462    0.001 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:37(sum_)
+        2    0.002    0.001    0.002    0.001 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+      688    0.001    0.000    0.003    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        1    0.001    0.001    0.463    0.463 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:85(mul_)
+     1376    0.001    0.000    0.001    0.000 {method 'zfill' of 'str' objects}
+      688    0.001    0.000    0.001    0.000 {built-in method builtins.max}
+     2066    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+      687    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+      687    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ mul_ -- Length of operands: 311, 207 ------
+
+         10318 function calls in 1.058 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1030    1.049    0.001    1.053    0.001 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:37(sum_)
+        2    0.002    0.001    0.002    0.001 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+     1031    0.002    0.000    0.004    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        1    0.002    0.002    1.055    1.055 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:85(mul_)
+     2062    0.001    0.000    0.001    0.000 {method 'zfill' of 'str' objects}
+     1031    0.001    0.000    0.001    0.000 {built-in method builtins.max}
+     3095    0.001    0.000    0.001    0.000 {built-in method builtins.len}
+     1030    0.001    0.000    0.001    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+     1030    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+
+
+------ mul_ -- Length of operands: 415, 311 ------
+
+         13778 function calls in 2.014 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1376    2.000    0.001    2.007    0.001 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:37(sum_)
+        2    0.004    0.002    0.004    0.002 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        1    0.003    0.003    2.010    2.010 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:85(mul_)
+     1377    0.002    0.000    0.006    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+     2754    0.002    0.000    0.002    0.000 {method 'zfill' of 'str' objects}
+     1377    0.001    0.000    0.001    0.000 {built-in method builtins.max}
+     4133    0.001    0.000    0.001    0.000 {built-in method builtins.len}
+     1376    0.001    0.000    0.001    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+     1376    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        2    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+--------- calculator_roman div_ function ---------
+
+------ div_ -- Length of operands: 9, 5 ------
+
+         30777 function calls in 0.087 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     2796    0.074    0.000    0.082    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:56(sub_)
+        1    0.004    0.004    0.087    0.087 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:105(div_)
+     2797    0.004    0.000    0.007    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+    13986    0.002    0.000    0.002    0.000 {built-in method builtins.len}
+     5594    0.001    0.000    0.001    0.000 {method 'zfill' of 'str' objects}
+     2797    0.001    0.000    0.001    0.000 {built-in method builtins.max}
+     2796    0.001    0.000    0.001    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        3    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        3    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ div_ -- Length of operands: 10, 5 ------
+
+         205842 function calls in 0.613 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    18711    0.529    0.000    0.583    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:56(sub_)
+    18712    0.027    0.000    0.047    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+        1    0.026    0.026    0.613    0.613 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:105(div_)
+    93561    0.010    0.000    0.010    0.000 {built-in method builtins.len}
+    37424    0.009    0.000    0.009    0.000 {method 'zfill' of 'str' objects}
+    18712    0.008    0.000    0.008    0.000 {built-in method builtins.max}
+    18711    0.005    0.000    0.005    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        3    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        3    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ div_ -- Length of operands: 11, 5 ------
+
+         1633917 function calls in 5.405 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   148536    4.740    0.000    5.159    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:56(sub_)
+        1    0.213    0.213    5.405    5.405 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:105(div_)
+   148537    0.202    0.000    0.366    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+   742686    0.079    0.000    0.079    0.000 {built-in method builtins.len}
+   297074    0.070    0.000    0.070    0.000 {method 'zfill' of 'str' objects}
+   148537    0.067    0.000    0.067    0.000 {built-in method builtins.max}
+   148536    0.035    0.000    0.035    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        3    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        3    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ div_ -- Length of operands: 12, 5 ------
+
+         30754690 function calls in 111.038 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+  2795879   98.427    0.000  106.353    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:56(sub_)
+        1    4.069    4.069  111.038  111.038 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:105(div_)
+  2795880    3.814    0.000    6.895    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:22(normalized)
+ 13979401    1.478    0.000    1.478    0.000 {built-in method builtins.len}
+  5591760    1.299    0.000    1.299    0.000 {method 'zfill' of 'str' objects}
+  2795880    1.272    0.000    1.272    0.000 {built-in method builtins.max}
+  2795879    0.679    0.000    0.679    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:29(preparing_result)
+        3    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:9(convert_to_binary)
+        3    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_roman.py:5(__init__)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

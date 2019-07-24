@@ -1,0 +1,264 @@
+--------- calculator_kate add function ---------
+
+------ add -- Length of operands: 112, 112 ------
+
+         9 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+        2    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ add -- Length of operands: 7327, 7327 ------
+
+         9 function calls in 0.013 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.011    0.011    0.011    0.011 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+        1    0.002    0.002    0.013    0.013 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+        2    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ add -- Length of operands: 10990, 10990 ------
+
+         9 function calls in 0.020 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.016    0.016    0.016    0.016 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+        1    0.004    0.004    0.020    0.020 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+        2    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ add -- Length of operands: 14653, 14653 ------
+
+         9 function calls in 0.029 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.021    0.021    0.021    0.021 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+        1    0.007    0.007    0.029    0.029 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+        2    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+--------- calculator_kate subtract function ---------
+
+------ subtract -- Length of operands: 112, 112 ------
+
+         9 function calls in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:108(subtract)
+        2    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+
+
+------ subtract -- Length of operands: 7327, 7327 ------
+
+         9 function calls in 0.012 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.012    0.012    0.012    0.012 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+        1    0.000    0.000    0.012    0.012 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:108(subtract)
+        2    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+
+
+------ subtract -- Length of operands: 10990, 10990 ------
+
+         9 function calls in 0.016 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.015    0.015    0.016    0.016 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+        1    0.000    0.000    0.016    0.016 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:108(subtract)
+        2    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ subtract -- Length of operands: 14653, 14653 ------
+
+         9 function calls in 0.021 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.021    0.021    0.021    0.021 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+        1    0.000    0.000    0.021    0.021 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:108(subtract)
+        2    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+--------- calculator_kate multiply function ---------
+
+------ multiply -- Length of operands: 180, 180 ------
+
+         260823 function calls in 4.490 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    32580    4.095    0.000    4.263    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+        1    0.140    0.140    4.490    4.490 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:155(multiply)
+    32580    0.137    0.000    0.165    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+    32580    0.087    0.000    4.350    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+    65160    0.019    0.000    0.019    0.000 {method 'upper' of 'str' objects}
+    97921    0.012    0.000    0.012    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ multiply -- Length of operands: 207, 207 ------
+
+         344658 function calls in 6.785 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    43056    6.237    0.000    6.467    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+        1    0.195    0.195    6.785    6.785 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:155(multiply)
+    43056    0.188    0.000    0.225    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+    43056    0.123    0.000    6.590    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+    86112    0.025    0.000    0.025    0.000 {method 'upper' of 'str' objects}
+   129376    0.016    0.000    0.016    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ multiply -- Length of operands: 311, 207 ------
+
+         516882 function calls in 15.163 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    64584   14.164    0.000   14.577    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+    64584    0.341    0.000    0.405    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        1    0.340    0.340   15.163   15.163 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:155(multiply)
+    64584    0.247    0.000   14.823    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+   129168    0.046    0.000    0.046    0.000 {method 'upper' of 'str' objects}
+   193960    0.026    0.000    0.026    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ multiply -- Length of operands: 415, 311 ------
+
+         1035322 function calls in 38.528 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   129376   36.165    0.000   37.109    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+   129376    0.786    0.000    0.929    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        1    0.780    0.780   38.528   38.528 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:155(multiply)
+   129376    0.639    0.000   37.748    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+   258752    0.107    0.000    0.107    0.000 {method 'upper' of 'str' objects}
+   388440    0.052    0.000    0.052    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+--------- calculator_kate divide function ---------
+
+------ divide -- Length of operands: 9, 5 ------
+
+         44724 function calls in 0.102 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     5590    0.068    0.000    0.088    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+     5590    0.016    0.000    0.020    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        1    0.005    0.005    0.102    0.102 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:198(divide)
+     2795    0.005    0.000    0.059    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:108(subtract)
+     2795    0.004    0.000    0.038    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+    11180    0.002    0.000    0.002    0.000 {method 'upper' of 'str' objects}
+    16771    0.002    0.000    0.002    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ divide -- Length of operands: 10, 5 ------
+
+         299364 function calls in 0.742 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    37420    0.501    0.000    0.644    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+    37420    0.115    0.000    0.139    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        1    0.035    0.035    0.742    0.742 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:198(divide)
+    18710    0.033    0.000    0.423    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:108(subtract)
+    18710    0.029    0.000    0.284    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+    74840    0.014    0.000    0.014    0.000 {method 'upper' of 'str' objects}
+   112261    0.014    0.000    0.014    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ divide -- Length of operands: 11, 5 ------
+
+         2376564 function calls in 6.229 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   297070    4.319    0.000    5.453    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+   297070    0.913    0.000    1.103    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        1    0.280    0.280    6.229    6.229 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:198(divide)
+   148535    0.271    0.000    3.550    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:108(subtract)
+   148535    0.225    0.000    2.399    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+   594140    0.115    0.000    0.115    0.000 {method 'upper' of 'str' objects}
+   891211    0.107    0.000    0.107    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+------ divide -- Length of operands: 12, 5 ------
+
+         44734052 function calls in 128.057 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+  5591756   91.206    0.000  113.302    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:114(basis_for_add_or_subtract)
+  5591756   17.960    0.000   21.504    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:90(unify_nums)
+        1    5.320    5.320  128.057  128.057 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:198(divide)
+  2795878    5.158    0.000   71.809    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:108(subtract)
+  2795878    4.277    0.000   50.928    0.000 /home/pc/PycharmProjects/inter_nature/SuperCalculator/calculator_kate.py:102(add)
+ 11183512    2.138    0.000    2.138    0.000 {method 'upper' of 'str' objects}
+ 16775269    1.998    0.000    1.998    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
