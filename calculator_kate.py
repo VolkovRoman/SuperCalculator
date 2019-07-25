@@ -168,28 +168,31 @@ class Calculator:
                 current_res = x_cur * y_cur + cur_iteration_pool
                 cur_iteration_pool = 0
 
-                if current_res >= base:
-                    cur_iteration_pool = current_res // base
+                while current_res >= base:
+                    cur_iteration_pool += current_res // base
                     current_res = current_res % base
 
                 additional_rate = 10 ** -(j + 1)
 
                 if base == 16:
                     current_res = Number.dec_to_hex(current_res)
-                    iteration_res = self.add(iteration_res, str(current_res) + str(additional_rate)[1:], base)
-                    try:
-                        if int(iteration_res) >= 10:
-                            iteration_res = Number.dec_to_hex(int(iteration_res))
-                    except ValueError:
-                        continue
+                    iteration_res = self.add(iteration_res, current_res + str(additional_rate)[1:], base)
                 else:
                     iteration_res = str(self.add(iteration_res, str(current_res * additional_rate), base))
             additional_rate = 10 ** -(i + 1)
             if cur_iteration_pool:
                 iteration_res = str(cur_iteration_pool) + iteration_res
-                cur_iteration_pool = 0
+
             iteration_res += str(additional_rate)[1:]
             res = str(self.add(iteration_res, res, base))
+            if base == 16 and cur_iteration_pool:
+                try:
+                    if int(res[:2]) >= 10:
+                        res = Number.dec_to_hex(int(res[:2])) + res[2:]
+                except Exception:
+                    pass
+            cur_iteration_pool = 0
+
         return res
 
     def divide(self, x, y, base):
