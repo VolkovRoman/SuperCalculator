@@ -1,3 +1,5 @@
 .vscode
-speed_test.txt
 __pycache__
+.calculator_kate_performance/
+.calculator_roman_performance/
+.calculator_roman_bin_performance/
