@@ -182,15 +182,15 @@ class Calculator:
             additional_rate = 10 ** -(i + 1)
             if cur_iteration_pool:
                 iteration_res = str(cur_iteration_pool) + iteration_res
+                if base == 16:
+                    try:
+                        if int(iteration_res) >= 10:
+                            iteration_res = Number.dec_to_hex(int(iteration_res[:2])) + iteration_res[2:]
+                    except Exception:
+                        pass
 
             iteration_res += str(additional_rate)[1:]
             res = str(self.add(iteration_res, res, base))
-            if base == 16 and cur_iteration_pool:
-                try:
-                    if int(res[:2]) >= 10:
-                        res = Number.dec_to_hex(int(res[:2])) + res[2:]
-                except Exception:
-                    pass
             cur_iteration_pool = 0
 
         return res
