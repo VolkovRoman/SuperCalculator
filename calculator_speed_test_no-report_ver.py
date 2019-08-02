@@ -1,6 +1,7 @@
 import cProfile
 import pstats
 import io
+import secrets
 
 from calculator_roman import Number, sum_, sub_, mul_, div_
 from calculator_kate import Calculator
