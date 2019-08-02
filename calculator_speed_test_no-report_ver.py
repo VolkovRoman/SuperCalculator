@@ -14,6 +14,10 @@ def collect_info(pr):
     return a.total_tt
 
 
+def rand_hex():
+    return secrets.token_hex(150), secrets.token_hex(100)
+
+
 def test_performance(calc_funcs, wrap=None):
     funcs_quantity = len(calc_funcs)
 
@@ -26,8 +30,8 @@ def test_performance(calc_funcs, wrap=None):
         for i in range(10000):
             base = 16
             # Здесь должны быть рандомные входные данные длиной 150 и 100
-            x = '1015165122054415011111113515146834551681648554684351268011111110151656153513515146834551681648543541'
-            y = '5424542415458457584254811111111111111110151615351351514683455168164854354654115161065122054415015458'
+            x = rand_hex()[0]
+            y = rand_hex()[1]
             if wrap:
                 calc_funcs[op](Number(x, base).convert_to_binary(),
                                Number(y, base).convert_to_binary())
@@ -35,7 +39,7 @@ def test_performance(calc_funcs, wrap=None):
                 calc_funcs[op](x, y, base)
         profiler.disable()
 
-        tottime_list[op] = collect_info(profiler)
+        tottime_list[op] = round(collect_info(profiler), 3)
     return tottime_list
 
 
