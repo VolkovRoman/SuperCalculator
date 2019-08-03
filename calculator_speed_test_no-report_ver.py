@@ -2,7 +2,7 @@ import cProfile
 import pstats
 import io
 import secrets
-
+from beautifultable import BeautifulTable
 from calculator_roman import Number, sum_, sub_, mul_, div_
 from calculator_kate import Calculator
 
@@ -50,6 +50,12 @@ if __name__ == "__main__":
 
     CALC_NAME_2 = 'calculator_kate'
     FUNCS_2 = [Calculator().add, Calculator().subtract, Calculator().multiply, Calculator().divide]
-
-    print(test_performance(FUNCS_1, wrap=True))
-    print(test_performance(FUNCS_2))
+    res_timing_roman = test_performance(FUNCS_1, wrap=True)
+    res_timing_kate = test_performance(FUNCS_2)
+    table = BeautifulTable()
+    table.column_headers = ['name', 'add', 'sub', 'mul', 'div']
+    table.append_row(['Roman'] + res_timing_roman)
+    table.append_row(['Kate'] + res_timing_kate)
+    table.append_row(['Marat', '4.401', '4.353', '1072.925', '189.233'])
+    table.append_row(['Svetozar', '7.944', '7.870', '986.770', '2936.387'])
+    print(table)
